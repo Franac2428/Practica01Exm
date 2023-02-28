@@ -4,6 +4,8 @@
  */
 package com.practica01.sln.domain;
 
+
+import jakarta.annotation.sql.DataSourceDefinition;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,7 +17,18 @@ import lombok.Data;
 @Entity
 @Table(name="estado") //Se relaciona con la tabla de BD estados
 
+
 public class Estado {
+    private static final long serialVersionUID = 1L;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Se ponen en las entidades
+    private Long idPais;
+    String  nombre_pais;
+    String capital;
+    int id_continente;
+    int poblacion;
+    String zona_horaria;
     
     private static final long serialVersionUID = 1L;
     
@@ -50,3 +63,6 @@ public class Estado {
     }
     
 }
+
+
+
