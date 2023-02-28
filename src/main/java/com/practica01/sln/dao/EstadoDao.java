@@ -4,10 +4,13 @@
  */
 package com.practica01.sln.dao;
 
+import com.practica01.sln.domain.Estado;
+import org.springframework.data.repository.CrudRepository;
+
 /**
  *
  * @author HP PROBOOK
  */
-public interface EstadoDao {
-    
+public interface EstadoDao extends CrudRepository<Estado, Long> {
+
 }
