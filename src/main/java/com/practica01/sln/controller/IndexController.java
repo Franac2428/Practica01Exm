@@ -5,8 +5,8 @@
 package com.practica01.sln.controller;
 
 import com.practica01.sln.dao.EstadoDao;
-import practica01.sln.domain.Estado;
-import practica01.sln.service.EstadoService;
+import com.practica01.sln.domain.Estado;
+import com.practica01.sln.service.EstadoService;
 import java.util.Arrays;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;

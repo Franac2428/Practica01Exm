@@ -4,7 +4,7 @@
  */
 package com.practica01.sln.service;
 
-import com.Tpractica01.sln.domain.Estado;
+import com.practica01.sln.domain.Estado;
 import java.util.List;
 
 /**

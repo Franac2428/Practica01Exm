@@ -4,8 +4,8 @@
  */
 package com.practica01.sln.service;
 
-import com.practica01.sln.dao.ClienteDao;
-import com.practica01.sln.domain.Cliente;
+import com.practica01.sln.dao.EstadoDao;
+import com.practica01.sln.domain.Estado;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
 package com.practica01.sln.dao;
+import org.springframework.data.repository.CrudRepository;
+import com.practica01.sln.domain.Estado;
 
 /**
  *

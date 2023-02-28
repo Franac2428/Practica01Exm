@@ -13,7 +13,7 @@ import lombok.Data;
 
 @Data //Crea los get y set automáticos
 @Entity
-@Table(name="estados") //Se relaciona con la tabla de BD estados
+@Table(name="estado") //Se relaciona con la tabla de BD estados
 
 public class Estado {
     
@@ -21,23 +21,24 @@ public class Estado {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Se ponen en las entidades
-    private Int id_pais; //Hibernate lo transforma en id_pais
-    String nombre_pais;
-    String capital;
-    Int id_continente;
-    Int poblacion;
-    String zona_horaria;
+    private Long id_pais;
+    private String nombre;
+    private String capital;
+    private int continente;
+    private int poblacion;
+    private int zona_horaria;
     
     public Estado() {
     }
 
     //Constructor sobrecargado
-    public Estado(String nombre_pais, String capital, Int id_continente, Int poblacion, String zona_horaria) {
-        this.nombrePais = nombre_pais;
+    public Estado(Long id_pais, String nombre, String capital, int continente, int poblacion, int zona_horaria) {
+        this.id_pais = id_pais;
+        this.nombre = nombre;
         this.capital = capital;
-        this.continente = id_continente;
+        this.continente = continente;
         this.poblacion = poblacion;
-        this.zona = zona_horaria;
+        this.zona_horaria = zona_horaria;
     }
     
 }
