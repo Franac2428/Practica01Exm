@@ -8,6 +8,6 @@ package com.practica01.sln.dao;
  *
  * @author HP PROBOOK
  */
-public interface EstadoDao {
+public interface EstadoDao extends CrudRepository<Estado, String> {
     
 }

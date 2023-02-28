@@ -4,10 +4,44 @@
  */
 package com.practica01.sln.service;
 
+import com.practica01.sln.dao.ClienteDao;
+import com.practica01.sln.domain.Cliente;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 /**
  *
  * @author HP PROBOOK
  */
-public class EstadoServiceImpl {
+public class EstadoServiceImpl implements EstadoService {
+    
+    @Autowired
+    EstadoDao estadoDao;
+    
+    @Override
+    @Transactional(readOnly = true) //Para que en la BD esto sea de solo lectura
+    public List<Estado> getEstados() {
+        //Cast as list
+       return (List<Estado>)estadoDao.findAll();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Estado getEstado(Estado estado) {
+        return estadoDao.findById(estado.getIdEstado()).orElse(null);
+    }
+
+    @Override
+    @Transactional
+    public void save(Estado estado) {
+        estadoDao.save(estado);
+    }
+
+    @Override
+    @Transactional
+    public void delete(Estado estado) {
+        estadoDao.deleteById(estado.getIdEstado());
+    }
     
 }
