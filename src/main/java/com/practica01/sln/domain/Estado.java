@@ -4,6 +4,7 @@
  */
 package com.practica01.sln.domain;
 
+
 import jakarta.annotation.sql.DataSourceDefinition;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,9 +13,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 
-@Data
+@Data //Crea los get y set automáticos
 @Entity
-@Table(name = "estado")
+@Table(name="estado") //Se relaciona con la tabla de BD estados
+
 
 public class Estado {
     private static final long serialVersionUID = 1L;
@@ -28,18 +30,38 @@ public class Estado {
     int poblacion;
     String zona_horaria;
     
+    private static final long serialVersionUID = 1L;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Se ponen en las entidades
+    private Long id_pais;
+    private String nombre;
+    private String capital;
+    private int continente;
+    private int poblacion;
+    private int zona_horaria;
+    
     public Estado() {
     }
-    
-    //Constructor cargado con los datos de la tabla estado
-    public Estado(Long idPais, String nombre_pais, String capital, int id_continente, int poblacion, String zona_horaria) {
-        this.idPais = idPais;
-        this.nombre_pais = nombre_pais;
+
+    //Constructor sobrecargado
+    public Estado(Long id_pais, String nombre, String capital, int continente, int poblacion, int zona_horaria) {
+        this.id_pais = id_pais;
+        this.nombre = nombre;
         this.capital = capital;
-        this.id_continente = id_continente;
+        this.continente = continente;
         this.poblacion = poblacion;
         this.zona_horaria = zona_horaria;
-    }  
+    }
+    
+    public String getIdEstado() {
+        return id_pais.toString();
+    }
+    
+    public void setIdEstado(Long IdEstado) {
+        this.id_pais = id_pais;
+    }
+    
 }
 
 
