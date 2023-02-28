@@ -1,0 +1,43 @@
+/*
+Práctica Caso Simulación
+Grupo 3
+Francisco Araya - Andrey Burgos - Salim Mustafa
+*/
+
+*{
+    background-color: whitesmoke;
+    font-family: sans-serif;
+}
+
+/*
+Adicionales
+*/
+
+h1{
+    text-align: center;
+}
+
+.menu{
+    margin-top: -30px;
+    position: absolute;
+}
+
+footer{
+    position: absolute;
+    bottom:0%;
+    height: 5%;
+    width: 100%;
+    text-align: center;
+}
+
+.formPais{
+    position: absolute;
+    left: 40%
+}
+
+table{
+    position: absolute;
+    left: 35%;
+    border: darkblue;
+    border-style: dashed
+}

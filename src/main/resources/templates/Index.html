@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilo1.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header th:replace="Layout/Plantilla :: header"/>
+        <aside class="menu" th:replace="Layout/Plantilla :: aside"/>
+        <!--        <form th:replace="Layout/Plantilla :: form"/>-->
+        <div>
+            <table border="1">
+                <thead>
+                <th>Nombre</th>
+                <th>Capital</th>
+                <th>Continente</th>
+                <th>Población</th>
+                <th>Zona Horaria</th>
+                <th colspan="2">Acciones</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a>Modificar</a></td>
+                        <td><a>Eliminar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <footer th:replace="Layout/Plantilla :: footer"/>
+    </body>
+</html>

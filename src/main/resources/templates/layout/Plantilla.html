@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <link href="../css/estilo1.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <aside th:fragment="aside">
+            <h2>Menú</h2>
+            <ul>
+                <li>Listar Países</li>
+                <br>
+                <li>Crear Nuevo</li>
+                <br>
+            </ul>
+        </aside>
+        <header th:fragment="header">
+            <h1>Práctica 01 Estados del mundo</h2>
+        </header>
+        <form class="formPais">
+            <div>
+                <label for="iptNombre">Nombre</label>
+                <input id="iptNombre" type="text">
+            </div>
+            <br>
+            <div>
+                <label for="iptCapital">Capital</label>
+                <input id="iptCapital" type="text">
+            </div>
+            <br>
+            <div>
+                <label for="iptIdContinente">Continente</label>
+                <select id="iptIdContinente" name="select">
+                    <option value="-1">--Seleccione--</option>
+                    <option value="1">América</option>
+                    <option value="2">África</option>
+                    <option value="3">Europa</option>
+                    <option value="4">Asia</option>
+                    <option value="5">Oceanía</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="iptPoblacion">Población</label>
+                <input id="iptPoblacion" type="number">
+            </div>
+            <br>
+            <div>
+                <label for="iptZonaHoraria">Zona Horaria</label>
+                <input id="iptZonaHoraria" type="text">
+            </div>
+            <br>
+            <div>
+                <input id="btnGuardar" type="submit" value="Guardar">
+            </div>
+            <br>
+        </form>
+        <footer th:fragment="footer">
+            <p>Práctica para examen utilizando la arquitectura Model-View-Controller. Feb 2022</p>
+        </footer>
+    </body>
+</html>
