@@ -41,4 +41,12 @@ public class Estado {
         this.zona_horaria = zona_horaria;
     }
     
+    public String getIdEstado() {
+        return id_pais.toString();
+    }
+    
+    public void setIdEstado(Long IdEstado) {
+        this.id_pais = id_pais;
+    }
+    
 }

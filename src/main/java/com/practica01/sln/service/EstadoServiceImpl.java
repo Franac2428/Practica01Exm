@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
  *
  * @author HP PROBOOK
  */
+@Service
 public class EstadoServiceImpl implements EstadoService {
     
     @Autowired
