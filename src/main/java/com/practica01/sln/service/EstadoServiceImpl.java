@@ -34,15 +34,13 @@ public class EstadoServicelmpl implements EstadoService{
 
     @Override
     @Transactional
-    public void save(Cliente cliente) {
-        clienteDao.save(cliente);
+    public void save(Estado estado) {
+        EstadoDao.save(estado);
     }
 
-    @Override
     @Transactional
-    public void delete(Cliente cliente) {
-        clienteDao.deleteById(cliente.getIdCliente());
+    public void delete(Estado estado) {
+        clienteDao.deleteById(estado.getIdPais());
     }
     
-}
 }
